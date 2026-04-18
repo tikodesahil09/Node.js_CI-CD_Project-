@@ -15,26 +15,26 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'sudo docker build -t $APP_NAME .'
+                sh 'docker build -t $APP_NAME .'
             }
         }
 
         stage('Stop Old Container') {
             steps {
-                sh 'sudo docker stop $CONTAINER_NAME || true'
-                sh 'sudo docker rm $CONTAINER_NAME || true'
+                sh 'docker stop $CONTAINER_NAME || true'
+                sh 'docker rm $CONTAINER_NAME || true'
             }
         }
 
         stage('Run New Container') {
             steps {
-                sh 'sudo docker run -d -p 3000:3000 --name $CONTAINER_NAME $APP_NAME'
+                sh 'docker run -d -p 3000:3000 --name $CONTAINER_NAME $APP_NAME'
             }
         }
 
         stage('Verify Container') {
             steps {
-                sh 'sudo docker ps'
+                sh 'docker ps'
             }
         }
     }
