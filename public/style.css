@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #07111f, #0b1d35, #050b16);
+  color: #ffffff;
+}
+
+.navbar {
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(10, 10, 20, 0.9);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00cfff;
+  text-shadow: 0 0 12px #00cfff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #eaf6ff;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00cfff;
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  color: #1ee3cf;
+  text-shadow: 0 0 20px rgba(30, 227, 207, 0.8);
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #d9f8ff;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  text-align: center;
+}
+
+.container h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #f2f8ff;
+}
+
+.pipeline-steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+}
+
+.step {
+  padding: 16px 28px;
+  border: 2px solid #00cfff;
+  border-radius: 35px;
+  color: #dffbff;
+  box-shadow: 0 0 12px rgba(0, 207, 255, 0.3);
+  transition: 0.3s;
+}
+
+.step:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 18px rgba(0, 207, 255, 0.6);
+}
+
+.dashboard-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.card {
+  width: 260px;
+  padding: 30px 20px;
+  border-radius: 20px;
+  background: rgba(8, 20, 40, 0.9);
+  box-shadow: 0 0 20px rgba(0, 140, 255, 0.12);
+  border: 1px solid rgba(0, 207, 255, 0.12);
+}
+
+.card h3 {
+  color: #00d8ff;
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: #f4fbff;
+  font-size: 1rem;
+}
+
+.contact-box {
+  max-width: 500px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+input,
+textarea {
+  padding: 14px 16px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+  background: #eafcff;
+  color: #000;
+}
+
+button {
+  padding: 14px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #00cfff, #20e3c2);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(0, 207, 255, 0.5);
+}
+
+#formMessage {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #7fffd4;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(5, 10, 20, 0.9);
+  color: #c8d8e8;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .container h2 {
+    font-size: 1.8rem;
+  }
+}
